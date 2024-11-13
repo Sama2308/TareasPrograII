@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            border-radius: 10px;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: 1px solid #007bff;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-danger {
+            margin-left: 10px;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+        .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container text-center">
+        <h2>Bienvenido a Tu Tienda Online</h2>
+    </div>
+</header>
+
+<div class="container">
+    <h1 class="text-center">Carrito de Compras</h1>
+
+    <!-- Formulario para agregar productos -->
+    <form th:action="@{/carrito}" method="post" class="mb-4">
+        <div class="form-group">
+            <label for="productoId">ID del Producto:</label>
+            <input type="text" id="productoId" name="productoId" class="form-control" placeholder="Ingrese el ID del producto" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Agregar al Carrito</button>
+    </form>
+
+    <h2>Productos en el Carrito</h2>
+    <div class="list-group">
+        <div class="card" th:each="producto : ${productos}">
+            <div class="card-header">
+                <span th:text="${producto.nombre}">Nombre del Producto</span>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="mb-1" th:text="'Precio: ' + ${producto.precio} + ' €'">Precio: 0 €</p>
+                        <p class="mb-1" th:text="'Cantidad: ' + ${producto.cantidad}">Cantidad: 0</p>
+                    </div>
+                    <form th:action="@{/carrito/remove}" method="post">
+                        <input type="hidden" name="productoId" th:value="${producto.id}"/>
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-right mt-4">
+        <h3 class="total" th:text="'Total: ' + ${totalPrecio} + ' €'">Total: 0 €</h3>
+        <a href="/checkout" class="btn btn-success btn-lg mt-3">Proceder al Pago</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Tu Tienda Online. Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

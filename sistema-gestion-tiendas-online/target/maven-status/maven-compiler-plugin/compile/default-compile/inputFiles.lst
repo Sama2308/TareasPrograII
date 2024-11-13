@@ -1,0 +1,16 @@
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/SistemaGestionTiendasOnlineApplication.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/controller/CarritoController.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/controller/PedidoController.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/controller/ProductoController.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/Carrito.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/Cliente.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/DetalleCarrito.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/DetallePedido.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/Pedido.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/model/Producto.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/repository/CarritoRepository.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/repository/PedidoRepository.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/repository/ProductoRepository.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/service/CarritoService.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/service/PedidoService.java
+/Users/sadeth/Downloads/sistema-gestion-tiendas-online/src/main/java/com/tienda/sistemagestiontiendasonline/service/ProductoService.java
