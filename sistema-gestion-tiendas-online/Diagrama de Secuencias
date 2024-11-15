@@ -1,6 +1,0 @@
-Usuario -> CarritoController: agregarAlCarrito(productoId)
-CarritoController -> ProductoRepository: findById(productoId)
-ProductoRepository -> CarritoController: Producto
-CarritoController -> CarritoService: agregarProducto(Producto)
-CarritoService -> CarritoController: void
-CarritoController -> Usuario: redirigir a carrito
